@@ -1,0 +1,11 @@
+# Mac OS
+.DS_Store
+
+# Node.js and Deno
+node_modules
+
+# Environment variables
+.env
+
+# VS Code
+.vscode
