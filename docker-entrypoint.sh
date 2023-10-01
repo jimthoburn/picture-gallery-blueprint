@@ -5,9 +5,9 @@ rm -f /home/deno/git-repository/.git/index.lock
 
 # If the folder for the repository exists
 if [ -d "/home/deno/git-repository" ]; then
-  bash /usr/local/bin/update.sh
+  bash /home/deno/update.sh
 else
-  bash /usr/local/bin/setup.sh
+  bash /home/deno/setup.sh
 fi
 
 # Hand off to the CMD
