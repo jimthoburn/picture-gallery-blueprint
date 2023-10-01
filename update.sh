@@ -61,14 +61,5 @@ echo "- - - - - - - - - - - - - - - - - - - - - - -"
 cd /home/deno/git-repository && deno task build
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Link /deno/site folder to /deno/git-repository"
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-
-if [ -d "/home/deno/git-repository/_site" ]; then
-  rm -df /home/deno/site
-  ln -s /home/deno/git-repository/_site /home/deno/site
-fi
-
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
 echo "Finished updating"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"

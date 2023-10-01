@@ -1,5 +1,0 @@
-{
-  "tasks": {
-    "start": "cd /home/deno/site && deno run --allow-read=./ --allow-net=0.0.0.0:4000 /home/deno/start.js"
-  }
-}
