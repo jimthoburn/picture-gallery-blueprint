@@ -19,6 +19,7 @@ RUN chmod +x /home/deno/docker-entrypoint.sh
 # Add files for deno task start
 COPY deno.json /home/deno/deno.json
 COPY file-server.js /home/deno/file-server.js
+COPY start.js /home/deno/start.js
 
 # Make a folder where we can attach a persistent disk
 RUN mkdir /home/deno/git-repository
