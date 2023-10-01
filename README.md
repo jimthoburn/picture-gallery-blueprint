@@ -18,4 +18,15 @@ The basic steps to get it working are:
 6. In your Render dashboard, create a new [blueprint](https://render.com/docs/infrastructure-as-code) using your copy of this repository. A new service will be set up for you automatically.
 7. Link the environment group you created in step 4 to your new service. Your service should automatically re-deploy.
 
-[Git Large File Storage](https://git-lfs.github.com/) is configured automatically. This will support usig `git-lfs` if it’s also enabled in your [content repository](https://github.com/jimthoburn/picture-gallery). If you have a lot of image files, you may run into [bandwidth and storage limits on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage).
+## Image file storage
+
+[Git Large File Storage](https://git-lfs.github.com/) is configured for the service. This will support usig `git-lfs` if it’s also enabled in your [content repository](https://github.com/jimthoburn/picture-gallery). If you have a lot of image files, you may run into [bandwidth limits on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage) when deploying the service.
+
+## Project goals
+
+This project is an experiment to see how easily the following goals can be achieved when deploying a static site…
+
+1. Support a large amount of images during the build step for a static site (more than 10 GB).
+2. Host the images using [GitHub’s Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage), so that they can be easily cloned from a private reposiotry or downloaded from a public repository.
+3. Use [Deno](https://deno.com) to build the site, to make local development and deployment more secure.
+
