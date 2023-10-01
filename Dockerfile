@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y openssh-client
 # Add setup scripts
 COPY setup.sh /home/deno/setup.sh
 COPY update.sh /home/deno/update.sh
+COPY pull-images-and-build.sh /home/deno/pull-images-and-build.sh
 COPY docker-entrypoint.sh /home/deno/docker-entrypoint.sh
 
 RUN chmod +x /home/deno/docker-entrypoint.sh

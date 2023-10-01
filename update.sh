@@ -44,6 +44,11 @@ echo "cd to /home/deno/git-repository"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
 cd /home/deno/git-repository
+
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+echo "Check git status"
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+
 git status
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
@@ -51,11 +56,11 @@ echo "Get latest files, while stashing any local changes"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
 git switch main
+
 git pull --rebase --autostash origin main
-git status
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Starting build"
+echo "Build site"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
 cd /home/deno/git-repository && deno task build
