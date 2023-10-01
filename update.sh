@@ -5,7 +5,7 @@
 set -Eeuo pipefail
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Starting reset"
+echo "Starting update"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
@@ -55,5 +55,20 @@ git pull --rebase --autostash origin main
 git status
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Finished reseting"
+echo "Starting build"
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+
+cd /home/deno/git-repository && deno task build
+
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+echo "Link `/deno/site` folder to `/deno/git-repository`"
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+
+if [ -d "/home/deno/git-repository/_site" ]; then
+  rm -df /home/deno/site
+  ln -s /home/deno/git-repository/_site /home/deno/site
+fi
+
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+echo "Finished updating"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"

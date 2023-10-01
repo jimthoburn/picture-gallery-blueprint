@@ -36,16 +36,8 @@ chmod 600 /home/deno/.ssh/known_hosts
 eval "$(ssh-agent -s)"
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Show Git status"
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-
-git config -l
-
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
 echo "Checkout repository for site"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-
-eval "$(ssh-agent -s)"
 
 # https://stackoverflow.com/questions/42019529/how-to-clone-pull-a-git-repository-ignoring-lfs
 GIT_LFS_SKIP_SMUDGE=1 \
@@ -95,6 +87,12 @@ echo "Check disk size"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
 df -h
+
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+echo "Build site"
+echo "- - - - - - - - - - - - - - - - - - - - - - -"
+
+cd /home/deno/git-repository && deno task build
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 echo "Link `/deno/site` folder to `/deno/git-repository`"
