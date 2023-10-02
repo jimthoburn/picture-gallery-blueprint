@@ -12,6 +12,8 @@
 #       sync: false
 #     - key: GITHUB_REPOSITORY
 #       sync: false
+#     - key: GITHUB_BRANCH
+#       sync: false
 #
 #   NOTE: This is for documentation purposes and isn’t supported by Render
 #   secretFiles:

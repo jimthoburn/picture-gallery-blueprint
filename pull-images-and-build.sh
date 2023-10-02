@@ -52,10 +52,10 @@ echo "- - - - - - - - - - - - - - - - - - - - - - -"
 git status
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Switch to branch main"
+echo "Switch to branch $GITHUB_BRANCH"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
-git switch main
+git switch $GITHUB_BRANCH
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 echo "Get LFS files"

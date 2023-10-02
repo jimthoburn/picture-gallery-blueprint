@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install -y git
 RUN apt-get update && apt-get install -y git-lfs
 RUN apt-get update && apt-get install -y openssh-client
 
+# Install optional tools
+RUN apt-get update && apt-get install -y alpine-pico
+
 # Add setup scripts
 COPY setup.sh /home/deno/setup.sh
 COPY update.sh /home/deno/update.sh

@@ -55,9 +55,9 @@ echo "- - - - - - - - - - - - - - - - - - - - - - -"
 echo "Get latest files, while stashing any local changes"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
-git switch main
+git switch $GITHUB_BRANCH
 
-git pull --rebase --autostash origin main
+git pull --rebase --autostash origin $GITHUB_BRANCH
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 echo "Build site"
