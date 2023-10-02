@@ -35,4 +35,4 @@ USER deno
 ENTRYPOINT ["/home/deno/docker-entrypoint.sh"]
 
 # Start the application
-CMD /bin/bash -c 'cd /home/deno/git-repository && deno task start'
+CMD /bin/bash -c 'cd /home/deno/git-repository && deno task file-server'
