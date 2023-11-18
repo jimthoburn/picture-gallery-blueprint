@@ -20,7 +20,7 @@ The basic steps to get it working are:
 
 ## Image file storage
 
-[Git Large File Storage](https://git-lfs.github.com/) is configured for the service. This will support usig `git-lfs` if it’s also enabled in your [content repository](https://github.com/jimthoburn/picture-gallery). If you have a lot of image files, you may run into [bandwidth limits on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage) when deploying the service.
+[Git Large File Storage](https://git-lfs.github.com/) is configured for the service. This will support using `git-lfs` if it’s also enabled in your [content repository](https://github.com/jimthoburn/picture-gallery). If you have a lot of image files, you may run into [bandwidth limits on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage) when deploying the service.
 
 ## Project goals
 
