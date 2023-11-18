@@ -2,7 +2,7 @@
 
 This is example code for automatically setting up a web site using [Deno](https://deno.land), [Git](https://git-scm.com) and [Docker](https://www.docker.com).
 
-It’s work in progress 🚧
+It’s a work in progress 🚧
 
 You can use the included [blueprint](https://render.com/docs/infrastructure-as-code) to host this on [Render](https://render.com/).
 
