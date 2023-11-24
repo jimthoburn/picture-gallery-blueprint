@@ -16,7 +16,7 @@ The basic steps to get it working are:
 4. Generate a new [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) and add it to your new GitHub account.
 5. In your Render dashboard, create a new environment group, following the “picture-gallery-settings” example in: https://github.com/jimthoburn/picture-gallery-blueprint/blob/main/render.yaml. For `GIT_REPOSITORY`, enter a value like `username/repository.git`, with the path to your copy of the  [content repository](https://github.com/jimthoburn/picture-gallery). You can use the account and key you created in steps 3 and 4 for the other environment variables and secrets. For the `known_hosts` secret file, you can add GitHub’s [SSH key entries](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints).
 6. In your Render dashboard, create a new [blueprint](https://render.com/docs/infrastructure-as-code) using your copy of this repository. A new service will be set up for you automatically.
-7. Link the environment group you created in step 4 to your new service. Your service should automatically re-deploy.
+7. Link the environment group you created in step 4 to your new service, and then re-deploy your new service.
 
 ## Image file storage
 
