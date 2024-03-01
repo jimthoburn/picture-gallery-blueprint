@@ -37,4 +37,4 @@ services:
   disk:
     name: git-repository
     mountPath: /home/deno/git-repository
-    sizeGB: 3
+    sizeGB: 5
