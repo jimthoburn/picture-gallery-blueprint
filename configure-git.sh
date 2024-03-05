@@ -5,10 +5,6 @@
 set -Eeuo pipefail
 
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Starting setup"
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
 echo "Configure Git"
 echo "- - - - - - - - - - - - - - - - - - - - - - -"
 
@@ -32,29 +28,3 @@ chmod 600 /home/deno/.ssh/id_ed25519.pub
 chmod 600 /home/deno/.ssh/known_hosts
 
 eval "$(ssh-agent -s)"
-
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Checkout repository for site"
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-
-# https://stackoverflow.com/questions/42019529/how-to-clone-pull-a-git-repository-ignoring-lfs
-GIT_LFS_SKIP_SMUDGE=1 \
-  git clone \
-    --branch $GITHUB_BRANCH \
-    git@github.com:$GITHUB_REPOSITORY \
-    /home/deno/git-repository
-
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Finished cloning repository for site"
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Create placeholder for site"
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-
-# Create a placeholder folder, so that site can be served while building
-mkdir /home/deno/git-repository/_site
-
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
-echo "Finished setup"
-echo "- - - - - - - - - - - - - - - - - - - - - - -"
