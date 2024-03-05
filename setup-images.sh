@@ -52,9 +52,22 @@ echo "- - - - - - - - - - - - - - - - - - - - - - -"
 # https://github.com/git-lfs/git-lfs/issues/325
 
 # Fetch a few times, in case the initial fetch is incomplete
+
 git lfs fetch
+git status
 git lfs fetch
+git status
 git lfs fetch
+git status
+
+git lfs pull
+
+git lfs fetch
+git status
+git lfs fetch
+git status
+git lfs fetch
+git status
 
 git lfs pull
 
