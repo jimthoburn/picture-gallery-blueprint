@@ -15,11 +15,10 @@ RUN apt-get update && apt-get install -y procps
 COPY configure-git.sh /home/deno/configure-git.sh
 COPY setup.sh /home/deno/setup.sh
 COPY setup-images.sh /home/deno/setup-images.sh
+COPY setup-images-and-build.sh /home/deno/setup-images-and-build.sh
 COPY reset.sh /home/deno/reset.sh
 COPY build.sh /home/deno/build.sh
 COPY build-site.sh /home/deno/build-site.sh
-COPY setup-and-build.sh /home/deno/setup-and-build.sh
-COPY reset-and-build.sh /home/deno/reset-and-build.sh
 
 COPY docker-entrypoint.sh /home/deno/docker-entrypoint.sh
 RUN chmod +x /home/deno/docker-entrypoint.sh
