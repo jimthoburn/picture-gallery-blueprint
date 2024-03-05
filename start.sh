@@ -22,4 +22,4 @@ else
 fi
 
 # Hand off to the CMD
-exec "$@"
+cd /home/deno/git-repository && deno task file-server

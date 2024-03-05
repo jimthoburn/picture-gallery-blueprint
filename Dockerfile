@@ -20,8 +20,8 @@ COPY reset.sh /home/deno/reset.sh
 COPY build.sh /home/deno/build.sh
 COPY build-site.sh /home/deno/build-site.sh
 
-COPY docker-entrypoint.sh /home/deno/docker-entrypoint.sh
-RUN chmod +x /home/deno/docker-entrypoint.sh
+COPY start.sh /home/deno/start.sh
+RUN chmod +x /home/deno/start.sh
 
 # Make a folder where we can attach a persistent disk
 RUN mkdir /home/deno/git-repository
@@ -41,7 +41,5 @@ RUN chown deno /home/deno/git-repository
 # Choose a user to run the application (this helps to avoid using `root`)
 USER deno
 
-ENTRYPOINT ["/home/deno/docker-entrypoint.sh"]
-
 # Start the application
-CMD /bin/bash -c 'cd /home/deno/git-repository && deno task file-server'
+CMD /bin/bash -c './home/deno/start.sh'
