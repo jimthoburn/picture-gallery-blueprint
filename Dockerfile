@@ -40,3 +40,6 @@ RUN chown deno /home/deno/git-repository
 
 # Choose a user to run the application (this helps to avoid using `root`)
 USER deno
+
+# Start the application
+CMD /bin/bash -c './home/deno/start.sh'

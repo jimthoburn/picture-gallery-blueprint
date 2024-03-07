@@ -34,7 +34,6 @@ services:
   autoDeploy: false
   region: oregon
   plan: starter
-  startCommand: /bin/bash -c './home/deno/start.sh'
   disk:
     name: git-repository
     mountPath: /home/deno/git-repository
