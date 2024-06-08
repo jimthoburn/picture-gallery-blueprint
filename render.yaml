@@ -35,6 +35,6 @@ services:
   region: oregon
   plan: starter
   disk:
-    name: repository
+    name: disk
     mountPath: /home/deno/git-repository
     sizeGB: 5
