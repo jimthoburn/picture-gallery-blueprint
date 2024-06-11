@@ -29,4 +29,3 @@ This project is an experiment to see how easily the following goals can be achie
 1. Support a large amount of images during the build step for a static site (more than 10 GB).
 2. Host the images using [GitHub’s Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage), so that they can be easily cloned from a private repository or downloaded from a public repository.
 3. Use [Deno](https://deno.com) to build the site, to make local development and deployment more secure.
-
